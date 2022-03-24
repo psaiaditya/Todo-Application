@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 
-function Form({ todos, deleteHandler }) {
+function Display({ todos, deleteHandler }) {
 
   return (
     
@@ -33,4 +33,4 @@ function Form({ todos, deleteHandler }) {
 
   )
 }
-export default Form;
+export default Display;
