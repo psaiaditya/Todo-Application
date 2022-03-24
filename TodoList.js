@@ -1,17 +1,36 @@
 import React from "react";
+import "./index.css";
 
-const TodoList = ({todolist,deleteHandler})=>{
- 
-    return(
-        <div>
-            {todolist.map((todo,index)=>
-            <div key={index}>
-                <h2>{todo}&nbsp;&nbsp;<button onClick={()=>deleteHandler(index)}>Delete</button></h2>
-                </div>)}
-        </div>
-    )
-            }
-    export default TodoList;
+function Form({ todos, deleteHandler }) {
+
+  return (
+    
+<table className="table">
+
+<tr>
+    <th>Task title</th>
+    <th>Date to complete</th>
+    <th>Action</th>
+  </tr>
+ {
+   todos.map((todoItem,index)=>
+      <tr>
+        <td>{todoItem.task}</td>
+        <td>{todoItem.date}</td>
+        <td><button onClick={()=>{
+          deleteHandler(index)
+        }} >Delete</button></td>
+      </tr>
+   )
+ }
+  
 
 
+  
+  
+</table>
+          
 
+  )
+}
+export default Form;
