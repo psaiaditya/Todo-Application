@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./index.css";
-import Form from "./Form";
+import Display from "./Display";
 
 //to get data from local storage
 
@@ -80,7 +80,7 @@ function App() {
         
       
       &nbsp;
-      <Form todos={todos} deleteHandler={deleteHandler} />
+      <Display todos={todos} deleteHandler={deleteHandler} />
       {validate}
     </div>
     
